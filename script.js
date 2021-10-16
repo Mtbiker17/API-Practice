@@ -1,5 +1,7 @@
 const refresh = document.getElementById('refresh');
-const img = document.querySelector("img");
+const img = document.querySelector('img');
+const searchButton = document.getElementById('searchButton');
+const searchValue = document.getElementById('searchValue');
 let search = 'theoffice'
 
 function getImage(search){
@@ -15,6 +17,11 @@ function getImage(search){
 refresh.addEventListener('click', () => {
   getImage(search);
 });
+
+searchButton.addEventListener('click', () => {
+  console.log(searchValue.value)
+  getImage(searchValue.value);
+})
 
 getImage(search);
 
