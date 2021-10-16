@@ -1,0 +1,23 @@
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+#image {
+    margin: auto;
+    padding: 50px;
+}
+
+#refresh {
+    width: 200px;
+    height: 20px;
+    margin: auto;
+}
+
+#search {
+    width: 200px;
+    height: 20px;
+    margin: auto;
+    margin-top: 25px;
+    
+}
