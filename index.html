@@ -5,9 +5,18 @@
     <title>Document</title>
   </head>
   <body>
+    <!--declare a blank image tag-->
     <img src="#" />
     <script>
+      //select the image and assign it to a variable so that we can change the URL once we’ve received it from the Giphy API
       const img = document.querySelector("img");
+      fetch("https://api.giphy.com/v1/gifs/translate?api_key=YOUR_API_KEY_HERE=cats", { mode: "cors" })
+        .then(function (response) {
+          return(response.json());
+        })
+        .then(function(response) {
+          img.src = response.data.images.original.url;
+        });
     </script>
   </body>
 </html>
