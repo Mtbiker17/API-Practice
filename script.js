@@ -11,6 +11,9 @@ function getImage(search){
     })
     .then(function(response) {
       img.src = response.data.images.original.url;
+    })
+    .catch(function(err) {
+      alert("No images found with this search parameter");
     });
 }
 
@@ -19,8 +22,9 @@ refresh.addEventListener('click', () => {
 });
 
 searchButton.addEventListener('click', () => {
-  console.log(searchValue.value)
+  console.log(searchValue.value);
   getImage(searchValue.value);
+  search = searchValue.value;
 })
 
 getImage(search);
